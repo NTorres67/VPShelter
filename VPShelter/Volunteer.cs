@@ -14,11 +14,14 @@ namespace VPShelter
         // Feed Method
         // Water Mehtod
 
+        int choosePet = 0;
 
+        Phoenix userPhoenix = new Phoenix();
+        Sphinx userSphinx = new Sphinx();
 
         //// fields
 
-        protected string volunteerName;
+        private string volunteerName;
         protected string volunteerID;
 
         private bool isHungry = true;
@@ -42,7 +45,7 @@ namespace VPShelter
         public Volunteer()
         {
             this.volunteerName = "Mars";
-            this.volunteerID = "V1.Mars";
+            this.volunteerID = "V1";
         }
 
         public Volunteer(bool isHungry, bool isThirsty, bool isBored)
@@ -58,70 +61,55 @@ namespace VPShelter
 
 
         //// get employee name
-        public override string EmployeeName()
+        public override void EmployeeName()
         {
-            return volunteerName;
+            Console.WriteLine("Your name is " + volunteerName + ".");
+            Console.WriteLine("");
         }
 
 
         //// get employee ID number
-        public override string EmployeeIDNumber()
+        public override void EmployeeIDNumber()
         {
-            return volunteerID;
+            Console.WriteLine("Your employee ID number is " + volunteerID + ".");
+            Console.WriteLine("");
         }
 
-
-        //// To Water
-        public string WateringTime()
+        //// To Feed Phoenix
+        public void FeedPet()
         {
-            if (isThirsty == false)
+            
+
+            do
             {
-                isThirsty = true;
-                return "Not thirsty thanks.";
-            }
-            else if (isThirsty == true)
-            {
-                isThirsty = false;
-                return "May I have something to drink.";
-            }
-            else
-            {
-                return "";
-            }
+                Console.WriteLine("Select which animal you would like to feed:");
+                Console.WriteLine("Type 1 for Phoenix");
+                Console.WriteLine("Type 2 for Sphinx");
+                Console.WriteLine("Type 99 to stop feeding the pets");
+                choosePet = int.Parse(Console.ReadLine());
 
+                switch (choosePet)
+                {
+                    case 1:
+                        userPhoenix.PhoenixFeedingTime();
+                        break;
 
-        }
+                    case 2:
+                        userSphinx.SphinxFeedingTime();
+                        break;
 
-
-        //// To Feed
-        public string FeedingTime()
-        {
-            if (IsHungry == false)
-            {
-                IsHungry = true;
-                return "Thank you but I am not hungry.";
-            }
-            else if (isHungry == true)
-            {
-                IsHungry = false;
-                return "Please feed me.";
-            }
-            else
-            {
-                return "";
-            }
-
-
-
-
-
-
-
-
-
+                }
+            } while (choosePet != 99);
+            Console.WriteLine("Thank you for feeding the pets.");
+            Console.WriteLine("");
+            
 
 
         }
+         
+
+
+        
 
     }
 }

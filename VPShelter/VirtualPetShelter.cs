@@ -12,5 +12,18 @@ namespace VPShelter
         // A data structure collecting all employees as a property
         // A data structure collecing all pets as a property
 
+        // fields
+        // invisible
+
+        // Properites
+
+        public List<Employee> AllEmployees { get; set; }
+        public List<VirtualPet> AllPets { get; set; }
+        
+
+        
+
+        
+
     }
 }

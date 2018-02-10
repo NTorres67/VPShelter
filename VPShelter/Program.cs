@@ -9,8 +9,6 @@ namespace VPShelter
     class Program
     {
         static void Main(string[] args)
-
-        
         {
             // Display actions
             // Takes user input
@@ -28,7 +26,7 @@ namespace VPShelter
 
             do
             {
-                Console.WriteLine(" Select 1 for Volunteer.");
+                Console.WriteLine("Select 1 for Volunteer.");
                 Console.WriteLine("Select 2 for Manager");
                 Console.WriteLine("Select 0 to quit");
 
@@ -66,15 +64,15 @@ namespace VPShelter
                                     // to get volunteer ID number
                                     userVolunteer.EmployeeIDNumber();
                                     break;
-                                    
+
                                 case "c":
                                     // to Feed
-                                    userVolunteer.FeedingTime();
+                                    userVolunteer.FeedPet();
                                     break;
 
                                 case "d":
                                     // To Water
-                                    userVolunteer.WateringTime();
+                                    //userVolunteer.WateringTime();
                                     break;
                             }
                         } while (task != "z");
@@ -82,7 +80,7 @@ namespace VPShelter
                         Console.WriteLine("Thank you for volunteering!");
 
                         break;
-                        
+
 
 
 
@@ -97,8 +95,8 @@ namespace VPShelter
             Console.WriteLine("");
             Console.WriteLine("Thank you for spendig time at the Mythical Beast Pet Shelter");
             Console.WriteLine("Please visit us again soon!");
-               
-                
+
+
 
         }
     }

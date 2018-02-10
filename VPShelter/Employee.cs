@@ -12,13 +12,13 @@ namespace VPShelter
         // 1 Property
         // 2 abstract methods
 
-        // field
+        // fields
 
      
 
         // Properties
         public string name { get; set; }
-        public string numberID { get; set; }
+        public string numberID { get;  }
       
 
         // Constructors 
@@ -26,8 +26,8 @@ namespace VPShelter
 
         // Methods
 
-        public abstract string EmployeeName();
-        public abstract string EmployeeIDNumber();
+        public abstract void EmployeeName();
+        public abstract void EmployeeIDNumber();
 
 
 
