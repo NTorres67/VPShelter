@@ -18,6 +18,9 @@ namespace VPShelter
         public string PetType { get; set; }
         public string PhoenixDiet { get; set; }
 
+        //// Constructors
+
+
         
     }
 }

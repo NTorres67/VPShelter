@@ -29,7 +29,7 @@ namespace VPShelter
             // default Constructors
         }
 
-        public VirtualPet(string petName, float petWeight)
+        public VirtualPet(string petName, float petWeightd)
         {
             this.petName = petName;
             this.petWeight = petWeight;

@@ -24,6 +24,11 @@ namespace VPShelter
 
             allEmployeesList.Add("Mars");
             allEmployeesList.Add("Athena");
+
+            List<string> allPetsList = new List<string>();
+
+            allPetsList.Add("Phoenix");
+            allPetsList.Add("Sphinx");
         }
         
         
