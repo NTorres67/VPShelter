@@ -8,20 +8,20 @@ namespace VPShelter
 {
     public class Manager : Employee
     {
+        
+
         //// fields
 
         private string managerName;
         protected string managerID;
 
         
-
         //// Properties
 
         public string ManagerName { get; }
         public string ManagerID { get; }
 
         
-
         //// Constructors
         public Manager()
         {
@@ -53,41 +53,67 @@ namespace VPShelter
         public void PlayTime()
         {
             Console.WriteLine("Which pet would you like to play with?");
-            Console.WriteLine("Type 1 to play with the Phoenix.");
-            Console.WriteLine("Type 2 to play with the Sphinx.");
+            Console.WriteLine("Type 1 to play with Emmalani.");
+            Console.WriteLine("Type 2 to play with Mana.");
             playWho = int.Parse(Console.ReadLine());
 
             switch (playWho)
             {
                 case 1:
                     {
-                        // play with Phoenix
+                        // play with Emmalani
                         Console.WriteLine("");
-                        Console.WriteLine("Close the windows when playing with the Phoenix");
+                        Console.WriteLine("Close the windows when playing with Emmalani.");
                         Console.WriteLine("");
                     }
                     break;
 
                 case 2:
                     {
-                        // play with the Sphinx
+                        // play with Mana
                         Console.WriteLine("");
-                        Console.WriteLine("Be careful of the Sphinx's riddles.");
+                        Console.WriteLine("Be careful of Mana's riddles.");
                         Console.WriteLine("");
                     }
                     break;
             }
         }
-        
+
 
         //// adopt a pet
+       
         public void PetAdoption()
         {
             Console.WriteLine("");
             Console.WriteLine("Would you like to adopt one of our mythical beasts?");
-            Console.WriteLine("Would you prefer a Phoenix or a Sphinx?");
+            Console.WriteLine("Would you prefer Emmalani or a Mana?");
             Console.WriteLine("");
+
+            List<string> petDescriptionList = new List<string>();
+            petDescriptionList.Add("ID  Name      Species   Color               Shoulder Ht(in)   Weight(lbs)");
+            petDescriptionList.Add("P1  Emmalani  Phoenix   purple and silver   17                5");
+            petDescriptionList.Add("P2  Mana      Sphinx    tan and brown       50                187");
+
+            foreach (string description in petDescriptionList)
+            {
+                Console.WriteLine(description);
+                Console.WriteLine("");
+            }
+
         }
+
+        //public void PetDescriptions()
+        //{
+        //    List<string> petDescriptionList = new List<string>();
+        //    petDescriptionList.Add("ID number   Name         Species    Color                 Shoulder Height(in)    Weight(lbs)");
+        //    petDescriptionList.Add("P1          Emmalani     Phoenix    purple and silver     17                     5");
+        //    petDescriptionList.Add("P2          Mana         Sphinx     tan and brown         50                     187");
+
+        //    foreach (string description in petDescriptionList)
+        //    {
+        //        Console.WriteLine(description);
+        //    }
+        //}
 
 
     }

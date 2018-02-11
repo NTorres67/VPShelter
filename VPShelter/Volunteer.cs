@@ -14,63 +14,58 @@ namespace VPShelter
         private string volunteerName;
         protected string volunteerID;
 
-        private int hungerLevelPhoenix = 0;
-        private int thirstLevelPhoenix = 0;
-        private int energyLevelPhoenix = 0;
+        private int hungerLevelEmmalani = 0;
+        private int thirstLevelEmmalani = 0;
+        private int energyLevelEmmalani = 0;
 
-        private int hungerLevelSphinx = 0;
-        private int thirstLevelSphinx = 0;
-        private int energyLevelSphinx = 0;
+        private int hungerLevelMana = 0;
+        private int thirstLevelMana = 0;
+        private int energyLevelMana = 0;
 
-
-
+        
         //// Properties
 
         public string VolunteerName { get; }
         public string VolunteerID { get; }
 
-        public int HungerLevelPhoenix { get; set; }
-        public int ThirstLevelPhoenix { get; set; }
-        public int EnergyLevelPhoenix { get; set; }
+        public int HungerLevelEmmalani { get; set; }
+        public int ThirstLevelEmmalani { get; set; }
+        public int EnergyLevelEmmalani { get; set; }
 
-        public int HungerLevelSphinx { get; set; }
-        public int ThirstLevelSphinx { get; set; }
-        public int EnergyLevelSphinx { get; set; }
+        public int HungerLevelMana { get; set; }
+        public int ThirstLevelMana { get; set; }
+        public int EnergyLevelMana { get; set; }
 
-
-
+        
         //// Constructors
         public Volunteer()
         {
             this.volunteerName = "Mars";
             this.volunteerID = "V1";
-            this.hungerLevelPhoenix = 50;
-            this.thirstLevelPhoenix = 50;
-            this.energyLevelPhoenix = 50;
+            this.hungerLevelEmmalani = 50;
+            this.thirstLevelEmmalani = 50;
+            this.energyLevelEmmalani = 50;
 
-            this.hungerLevelSphinx = 50;
-            this.thirstLevelSphinx = 50;
-            this.energyLevelSphinx = 50;
-
+            this.hungerLevelMana = 50;
+            this.thirstLevelMana = 50;
+            this.energyLevelMana = 50;
         }
 
 
-        public Volunteer(int hungerLevelPhoenix, int thirstLevelPhoenix, int energyLevelPhoenix, int hungerLevelSphinx, int thirstLevelSphinx, int energyLevelSphinx)
+        public Volunteer(int hungerLevelEmmalani, int thirstLevelEmmalani, int energyLevelEmmalani, int hungerLevelSphinx, int thirstLevelSphinx, int energyLevelSphinx)
         {
-            this.hungerLevelPhoenix = hungerLevelPhoenix;
-            this.thirstLevelPhoenix = thirstLevelPhoenix;
-            this.energyLevelPhoenix = energyLevelPhoenix;
+            this.hungerLevelEmmalani = hungerLevelEmmalani;
+            this.thirstLevelEmmalani = thirstLevelEmmalani;
+            this.energyLevelEmmalani = energyLevelEmmalani;
 
-            this.hungerLevelSphinx = hungerLevelSphinx;
-            this.thirstLevelSphinx = thirstLevelSphinx;
-            this.energyLevelSphinx = energyLevelSphinx;
+            this.hungerLevelMana = hungerLevelSphinx;
+            this.thirstLevelMana = thirstLevelSphinx;
+            this.energyLevelMana = energyLevelSphinx;
         }
 
        
-
         //// Methods
-
-
+        
         //// get employee name
         public override void EmployeeName()
         {
@@ -88,53 +83,53 @@ namespace VPShelter
 
 
         //// To Feed
-        int feedAmountPhoenix = 0;
-        int toFeedPhoenix = 0;
+        int feedAmountEmmalani = 0;
+        int toFeedEmmalani = 0;
         int feedWho;
 
-        int feedAmountSphinx = 0;
-        int toFeedSphinx = 0;
+        int feedAmountMana = 0;
+        int toFeedMana = 0;
 
         public void FeedingTime()
         {
-            Console.WriteLine("Type 1 to feed the Phoenix.");
-            Console.WriteLine("Type 2 to feed the Sphinx");
+            Console.WriteLine("Type 1 to feed Emmalani.");
+            Console.WriteLine("Type 2 to feed Mana.");
             feedWho = int.Parse(Console.ReadLine());
 
             switch (feedWho)
             {
                 case 1:
-                    // feed Phoenix
-                    Console.WriteLine("Do you want to increase or decrease your Phoenix's hunger level?");
+                    // feed Emmalani
+                    Console.WriteLine("Do you want to increase or decrease Emmalani's hunger level?");
                     Console.WriteLine("Type 1 to increase");
                     Console.WriteLine("Type 2 to decrease");
-                    toFeedPhoenix = int.Parse(Console.ReadLine());
+                    toFeedEmmalani = int.Parse(Console.ReadLine());
 
-                    if (toFeedPhoenix == 1)
+                    if (toFeedEmmalani == 1)
                     {
                         Console.WriteLine("Enter amount to increase hunger level.");
-                        feedAmountPhoenix = int.Parse(Console.ReadLine());
-                        this.hungerLevelPhoenix = hungerLevelPhoenix + feedAmountPhoenix;
-                        this.energyLevelPhoenix = energyLevelPhoenix + 10;
+                        feedAmountEmmalani = int.Parse(Console.ReadLine());
+                        this.hungerLevelEmmalani = hungerLevelEmmalani + feedAmountEmmalani;
+                        this.energyLevelEmmalani = energyLevelEmmalani + 10;
                     }
-                    else if (toFeedPhoenix == 2)
+                    else if (toFeedEmmalani == 2)
                     {
-                        Console.WriteLine("Amount to decrease hunger level.");
-                        feedAmountPhoenix = int.Parse(Console.ReadLine());
-                        this.hungerLevelPhoenix = hungerLevelPhoenix - feedAmountPhoenix;
-                        this.energyLevelPhoenix = energyLevelPhoenix - 5;
+                        Console.WriteLine("Enter amount to decrease hunger level.");
+                        feedAmountEmmalani = int.Parse(Console.ReadLine());
+                        this.hungerLevelEmmalani = hungerLevelEmmalani - feedAmountEmmalani;
+                        this.energyLevelEmmalani = energyLevelEmmalani - 5;
                     }
                     else
                     {
                         Console.WriteLine("");
                     }
 
-                    if (hungerLevelPhoenix >= 100)
+                    if (hungerLevelEmmalani >= 100)
                     {
                         Console.WriteLine("");
                         Console.WriteLine("No longer hungry thanks.");
                     }
-                    else if (hungerLevelPhoenix <= 99 && hungerLevelPhoenix > 50)
+                    else if (hungerLevelEmmalani <= 99 && hungerLevelEmmalani > 50)
                     {
                         Console.WriteLine("");
                         Console.WriteLine("May I have something to eat?");
@@ -148,37 +143,37 @@ namespace VPShelter
 
                 case 2:
                     {
-                        // feed Sphinx
-                        Console.WriteLine("Do you want to increase or decrease your Sphinx's hunger level?");
+                        // feed Mana
+                        Console.WriteLine("Do you want to increase or decrease Mana's hunger level?");
                         Console.WriteLine("Type 1 to increase");
                         Console.WriteLine("Type 2 to decrease");
-                        toFeedSphinx = int.Parse(Console.ReadLine());
+                        toFeedMana = int.Parse(Console.ReadLine());
 
-                        if (toFeedSphinx == 1)
+                        if (toFeedMana == 1)
                         {
                             Console.WriteLine("Enter amount to increase hunger level.");
-                            feedAmountSphinx = int.Parse(Console.ReadLine());
-                            this.hungerLevelSphinx = hungerLevelSphinx + feedAmountSphinx;
-                            this.energyLevelSphinx = energyLevelSphinx + 10;
+                            feedAmountMana = int.Parse(Console.ReadLine());
+                            this.hungerLevelMana = hungerLevelMana + feedAmountMana;
+                            this.energyLevelMana = energyLevelMana + 10;
                         }
-                        else if (toFeedSphinx == 2)
+                        else if (toFeedMana == 2)
                         {
-                            Console.WriteLine("Amount to decrease hunger level.");
-                            feedAmountSphinx = int.Parse(Console.ReadLine());
-                            this.hungerLevelSphinx = hungerLevelSphinx - feedAmountSphinx;
-                            this.energyLevelSphinx = energyLevelSphinx - 5;
+                            Console.WriteLine("Enter amount to decrease hunger level.");
+                            feedAmountMana = int.Parse(Console.ReadLine());
+                            this.hungerLevelMana = hungerLevelMana - feedAmountMana;
+                            this.energyLevelMana = energyLevelMana - 5;
                         }
                         else
                         {
                             Console.WriteLine("");
                         }
 
-                        if (hungerLevelSphinx >= 100)
+                        if (hungerLevelMana >= 100)
                         {
                             Console.WriteLine("");
                             Console.WriteLine("No longer hungry thanks.");
                         }
-                        else if (hungerLevelSphinx <= 99 && hungerLevelSphinx > 50)
+                        else if (hungerLevelMana <= 99 && hungerLevelMana > 50)
                         {
                             Console.WriteLine("");
                             Console.WriteLine("May I have something to eat?");
@@ -186,66 +181,62 @@ namespace VPShelter
                         else
                         {
                             Console.WriteLine("");
-                            Console.WriteLine("Starving here!");
+                            Console.WriteLine("Food! Give me food!");
                         }
                         break;
                     }
             }    
-
-
-
-            
         }
 
 
         //// To Water
-        int waterAmountPhoenix = 0;
-        int toWaterPhoenix = 0;
+        int waterAmountEmmalani = 0;
+        int toWaterEmmalani = 0;
         int waterWho = 0;
-        int waterAmountSphinx = 0;
-        int toWaterSphinx = 0;
+        int waterAmountMana = 0;
+        int toWaterMana = 0;
 
 
         public void WateringTime()
         {
-            Console.WriteLine("Type 1 to water the Phoenix.");
-            Console.WriteLine("Type 2 to water the Sphinx");
+            Console.WriteLine("Type 1 to water Emmalani");
+            Console.WriteLine("Type 2 to water Mana");
             waterWho = int.Parse(Console.ReadLine());
 
             switch (waterWho)
             {
                 case 1:
-                    // water Phoenix
-                    Console.WriteLine("Do you want to increase or decrease your Phoenix's thirst level?");
+                    // water Emmalani
+                    Console.WriteLine("Do you want to increase or decrease Emmalani's thirst level?");
                     Console.WriteLine("Type 1 to increase");
                     Console.WriteLine("Type 2 to decrease");
-                    toWaterPhoenix = int.Parse(Console.ReadLine());
+                    toWaterEmmalani = int.Parse(Console.ReadLine());
 
-                    if (toWaterPhoenix == 1)
+                    if (toWaterEmmalani == 1)
                     {
                         Console.WriteLine("Enter amount to increase thirst level.");
-                        waterAmountPhoenix = int.Parse(Console.ReadLine());
-                        this.thirstLevelPhoenix = thirstLevelPhoenix + waterAmountPhoenix;
-                        this.energyLevelPhoenix = energyLevelPhoenix - 2;
+                        waterAmountEmmalani = int.Parse(Console.ReadLine());
+                        this.thirstLevelEmmalani = thirstLevelEmmalani + waterAmountEmmalani;
+                        this.energyLevelEmmalani = energyLevelEmmalani - 2;
                     }
-                    else if (toWaterPhoenix == 2)
+                    else if (toWaterEmmalani == 2)
                     {
                         Console.WriteLine("Amount to decrease thirst level.");
-                        waterAmountPhoenix = int.Parse(Console.ReadLine());
-                        this.thirstLevelPhoenix = thirstLevelPhoenix - waterAmountPhoenix;
-                        this.energyLevelPhoenix = energyLevelPhoenix + 1;
+                        waterAmountEmmalani = int.Parse(Console.ReadLine());
+                        this.thirstLevelEmmalani = thirstLevelEmmalani - waterAmountEmmalani;
+                        this.energyLevelEmmalani = energyLevelEmmalani + 1;
                     }
                     else
                     {
                         Console.WriteLine("");
                     }
 
-                    if (thirstLevelPhoenix >= 100)
+                    if (thirstLevelEmmalani >= 100)
                     {
                         Console.WriteLine("");
                         Console.WriteLine("No longer thirsty thanks.");
                     }
-                    else if (thirstLevelPhoenix <= 99 && thirstLevelPhoenix > 50)
+                    else if (thirstLevelEmmalani <= 99 && thirstLevelEmmalani > 50)
                     {
                         Console.WriteLine("");
                         Console.WriteLine("May I have something to drink?");
@@ -258,37 +249,37 @@ namespace VPShelter
                     break;
 
                 case 2:
-                    // water Sphinx
-                    Console.WriteLine("Do you want to increase or decrease your Sphinx's thirst level?");
+                    // water Mana
+                    Console.WriteLine("Do you want to increase or decrease Mana's thirst level?");
                     Console.WriteLine("Type 1 to increase");
                     Console.WriteLine("Type 2 to decrease");
-                    toWaterSphinx = int.Parse(Console.ReadLine());
+                    toWaterMana = int.Parse(Console.ReadLine());
 
-                    if (toWaterSphinx == 1)
+                    if (toWaterMana == 1)
                     {
                         Console.WriteLine("Enter amount to increase thirst level.");
-                        waterAmountSphinx = int.Parse(Console.ReadLine());
-                        this.thirstLevelSphinx = thirstLevelSphinx + waterAmountSphinx;
-                        this.energyLevelSphinx = energyLevelSphinx - 2;
+                        waterAmountMana = int.Parse(Console.ReadLine());
+                        this.thirstLevelMana = thirstLevelMana + waterAmountMana;
+                        this.energyLevelMana = energyLevelMana - 2;
                     }
-                    else if (toWaterSphinx == 2)
+                    else if (toWaterMana == 2)
                     {
                         Console.WriteLine("Amount to decrease thirst level.");
-                        waterAmountSphinx = int.Parse(Console.ReadLine());
-                        this.thirstLevelSphinx = thirstLevelSphinx - waterAmountSphinx;
-                        this.energyLevelSphinx = energyLevelSphinx + 1;
+                        waterAmountMana = int.Parse(Console.ReadLine());
+                        this.thirstLevelMana = thirstLevelMana - waterAmountMana;
+                        this.energyLevelMana = energyLevelMana + 1;
                     }
                     else
                     {
                         Console.WriteLine("");
                     }
 
-                    if (thirstLevelSphinx >= 100)
+                    if (thirstLevelMana >= 100)
                     {
                         Console.WriteLine("");
                         Console.WriteLine("No longer thirsty thanks.");
                     }
-                    else if (thirstLevelSphinx <= 99 && thirstLevelSphinx > 50)
+                    else if (thirstLevelMana <= 99 && thirstLevelMana > 50)
                     {
                         Console.WriteLine("");
                         Console.WriteLine("May I have something to drink?");
@@ -299,48 +290,41 @@ namespace VPShelter
                         Console.WriteLine("Dehydrated here!");
                     }
                     break;
-
-                case 3:
-                    {
-
-                    }
-                    break;
-
             }  
         }
 
 
         //// To Play
-        int playAmountPhoenix = 0;
+        int playAmountEmmalani = 0;
         int playWho = 0;
 
-        int playAmountSphinx = 0;
+        int playAmountMana = 0;
 
         public void PlayTime()
         {
-            Console.WriteLine("Type 1 to play with the Phoenix.");
-            Console.WriteLine("Type 2 to play with the Sphinx.");
+            Console.WriteLine("Type 1 to play with Emmalani");
+            Console.WriteLine("Type 2 to play with Mana");
             playWho = int.Parse(Console.ReadLine());
 
             switch (playWho)
             {
                 case 1:
-                    // play with Phoenix
-                    Console.WriteLine("Amount you want to play with the Phoenix?");
-                    playAmountPhoenix = int.Parse(Console.ReadLine());
-                    this.energyLevelPhoenix = energyLevelPhoenix + playAmountPhoenix;
-                    this.hungerLevelPhoenix = hungerLevelPhoenix - 50;
-                    this.thirstLevelPhoenix = thirstLevelPhoenix - 40;
+                    // play with Emmalani
+                    Console.WriteLine("Enter amount you want to play with Emmalani.");
+                    playAmountEmmalani = int.Parse(Console.ReadLine());
+                    this.energyLevelEmmalani = energyLevelEmmalani + playAmountEmmalani;
+                    this.hungerLevelEmmalani = hungerLevelEmmalani - 50;
+                    this.thirstLevelEmmalani = thirstLevelEmmalani - 40;
 
-                    if (energyLevelPhoenix >= 100)
+                    if (energyLevelEmmalani >= 100)
                     {
                         Console.WriteLine("");
                         Console.WriteLine("Play with me now!");
                     }
-                    else if (energyLevelPhoenix <= 99 && energyLevelPhoenix > 50)
+                    else if (energyLevelEmmalani <= 99 && energyLevelEmmalani > 50)
                     {
                         Console.WriteLine("");
-                        Console.WriteLine("Will you please play with me more?");
+                        Console.WriteLine("Will you please play with me 10 more minutes?");
                     }
                     else
                     {
@@ -350,19 +334,19 @@ namespace VPShelter
                     break;
                     
                 case 2:
-                    // play with Sphinx
-                    Console.WriteLine("Amount you want to play with the Sphinx?");
-                    playAmountSphinx = int.Parse(Console.ReadLine());
-                    this.energyLevelSphinx = energyLevelSphinx + playAmountSphinx;
-                    this.hungerLevelSphinx = hungerLevelSphinx - 50;
-                    this.thirstLevelSphinx = thirstLevelSphinx - 40;
+                    // play with Mana
+                    Console.WriteLine("Enter amount you want to play with Mana.");
+                    playAmountMana = int.Parse(Console.ReadLine());
+                    this.energyLevelMana = energyLevelMana + playAmountMana;
+                    this.hungerLevelMana = hungerLevelMana - 50;
+                    this.thirstLevelMana = thirstLevelMana - 40;
 
-                    if (energyLevelSphinx >= 100)
+                    if (energyLevelMana >= 100)
                     {
                         Console.WriteLine("");
                         Console.WriteLine("Play with me now!");
                     }
-                    else if (energyLevelSphinx <= 99 && energyLevelSphinx > 50)
+                    else if (energyLevelMana <= 99 && energyLevelMana > 50)
                     {
                         Console.WriteLine("");
                         Console.WriteLine("Will you please play with me more?");
@@ -370,13 +354,10 @@ namespace VPShelter
                     else
                     {
                         Console.WriteLine("");
-                        Console.WriteLine("I don't want to play anymore.");
+                        Console.WriteLine("Go away.");
                     }
                     break;
             }
-
-
-
         }
 
 
@@ -385,66 +366,62 @@ namespace VPShelter
 
         public void NapTime()
         {
-            Console.WriteLine("Type 1 to rest the Phoenix.");
-            Console.WriteLine("Type 2 to rest the Sphinx.");
+            Console.WriteLine("Type 1 to rest Emmalani");
+            Console.WriteLine("Type 2 to rest Mana");
             restWho = int.Parse(Console.ReadLine());
 
             switch (restWho)
             {
                 case 1:
-                    // rest Phoenix
-                    Console.WriteLine("Amount you want the Phoenix to nap?");
-                    playAmountPhoenix = int.Parse(Console.ReadLine());
-                    this.energyLevelPhoenix = energyLevelPhoenix - playAmountPhoenix;
-                    this.hungerLevelPhoenix = hungerLevelPhoenix - 15;
-                    this.thirstLevelPhoenix = thirstLevelPhoenix - 14;
+                    // rest Emmalani
+                    Console.WriteLine("Enter amount you want Emmalani to nap.");
+                    playAmountEmmalani = int.Parse(Console.ReadLine());
+                    this.energyLevelEmmalani = energyLevelEmmalani - playAmountEmmalani;
+                    this.hungerLevelEmmalani = hungerLevelEmmalani - 15;
+                    this.thirstLevelEmmalani = thirstLevelEmmalani - 14;
 
-                    if (energyLevelPhoenix >= 100)
+                    if (energyLevelEmmalani >= 100)
                     {
                         Console.WriteLine("");
-                        Console.WriteLine("Play with me now!");
+                        Console.WriteLine("But I don't want to nap!");
                     }
-                    else if (energyLevelPhoenix <= 99 && energyLevelPhoenix > 50)
+                    else if (energyLevelEmmalani <= 99 && energyLevelEmmalani > 50)
                     {
                         Console.WriteLine("");
-                        Console.WriteLine("Will you please play with me more?");
+                        Console.WriteLine("May I please nap later?");
                     }
                     else
                     {
                         Console.WriteLine("");
-                        Console.WriteLine("I need a nap.");
+                        Console.WriteLine("Have you seen my bed?");
                     }
                     break;
 
                 case 2:
-                    // rest Sphinx
-                    Console.WriteLine("Amount you want the Sphinx to nap?");
-                    playAmountSphinx = int.Parse(Console.ReadLine());
-                    this.energyLevelSphinx = energyLevelSphinx - playAmountSphinx;
-                    this.hungerLevelSphinx = hungerLevelSphinx - 15;
-                    this.thirstLevelSphinx = thirstLevelSphinx - 14;
+                    // rest Mana
+                    Console.WriteLine("Enter amount you want Mana to nap.");
+                    playAmountMana = int.Parse(Console.ReadLine());
+                    this.energyLevelMana = energyLevelMana - playAmountMana;
+                    this.hungerLevelMana = hungerLevelMana - 15;
+                    this.thirstLevelMana = thirstLevelMana - 14;
 
-                    if (energyLevelSphinx >= 100)
+                    if (energyLevelMana >= 100)
                     {
                         Console.WriteLine("");
-                        Console.WriteLine("Play with me now!");
+                        Console.WriteLine("Nope! Not napping!");
                     }
-                    else if (energyLevelSphinx <= 99 && energyLevelSphinx > 50)
+                    else if (energyLevelMana <= 99 && energyLevelMana > 50)
                     {
                         Console.WriteLine("");
-                        Console.WriteLine("Will you please play with me more?");
+                        Console.WriteLine("Do I really have to take a nap?");
                     }
                     else
                     {
                         Console.WriteLine("");
-                        Console.WriteLine("I need a nap.");
+                        Console.WriteLine("Where's my bed?");
                     }
                     break;
-
-            }
-
-
-            
+            }  
         }
 
 
@@ -454,8 +431,8 @@ namespace VPShelter
             Console.WriteLine("");
             Console.WriteLine("Status of our pets:");
             Console.WriteLine("Pet         Hunger      Thirst      Play");
-            Console.WriteLine("Phoenix     " + hungerLevelPhoenix + "           " + thirstLevelPhoenix + "          " + energyLevelPhoenix);
-            Console.WriteLine("Sphinx      " + hungerLevelSphinx + "           " + thirstLevelSphinx + "          " + energyLevelSphinx);
+            Console.WriteLine("Emmalani     " + hungerLevelEmmalani + "           " + thirstLevelEmmalani + "          " + energyLevelEmmalani);
+            Console.WriteLine("Mana         " + hungerLevelMana + "           " + thirstLevelMana + "          " + energyLevelMana);
             Console.WriteLine("");
         }
 

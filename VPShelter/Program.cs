@@ -21,8 +21,8 @@ namespace VPShelter
 
             Volunteer userVolunteer = new Volunteer();
             Manager userManager = new Manager();
-            Phoenix userPhoenix = new Phoenix();
-            Sphinx userSphinx = new Sphinx();
+            Emmalani userEmmalani = new Emmalani();
+            Mana userMana = new Mana();
 
 
 
@@ -84,25 +84,21 @@ namespace VPShelter
                                     //// to water
                                     userVolunteer.WateringTime();
                                     break;
-
-                                
+                                    
                                 case "e":
                                     //// to play
                                     userVolunteer.PlayTime();
                                     break;
-
-
+                                    
                                 case "f":
                                     //// to rest
                                     userVolunteer.NapTime();
                                     break;
-
                             }
                             
                             Console.WriteLine("");
                             userVolunteer.PetStatus();
-
-
+                            
                         } while (task != "z");
                         Console.WriteLine("");
                         Console.WriteLine("Again thank you for volunteering!");
@@ -119,7 +115,7 @@ namespace VPShelter
                             Console.WriteLine("Type \"g\" to learn your name.");
                             Console.WriteLine("Type \"h\" to learn your employee ID number.");
                             Console.WriteLine("Type \"i\" to play with a pet.");
-                            Console.WriteLine("Type \"j\" to adopt out a pet.");
+                            Console.WriteLine("Type \"j\" to arrange a pet adoption.");
                             Console.WriteLine("Type \"z\" to stop working as a manager.");
                             Console.WriteLine("");
 
