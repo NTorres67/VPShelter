@@ -13,7 +13,7 @@ namespace VPShelter
         // 2 abstract methods
 
         // fields
-
+        // none
      
 
         // Properties

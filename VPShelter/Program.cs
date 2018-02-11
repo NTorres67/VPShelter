@@ -14,11 +14,16 @@ namespace VPShelter
             // Takes user input
             // Triggers the actions based on user choices
 
+            
+
             int userInput = 0;
-            string animalType = " ";
             string task = " ";
 
             Volunteer userVolunteer = new Volunteer();
+            Manager userManager = new Manager();
+            Phoenix userPhoenix = new Phoenix();
+            Sphinx userSphinx = new Sphinx();
+
 
 
             Console.WriteLine("Welcome to the Mythical Beast Pet Shelter. ");
@@ -38,55 +43,122 @@ namespace VPShelter
                         // select Volunteer Class
                         Console.WriteLine("");
                         Console.WriteLine("Thank you for volunteering at our shelter.");
-                        Console.WriteLine("Please select what task would you like to do?");
+                        
+
+                        userVolunteer.PetStatus();
 
                         do
                         {
-
+                            Console.WriteLine("Please select what task would you like to do?");
                             Console.WriteLine("Type \"a\" to learn your name.");
                             Console.WriteLine("Type \"b\" to learn your employee ID number.");
-                            Console.WriteLine("Type \"d\" to Feed.");
-                            Console.WriteLine("Type \"e\" to Water.");
+                            Console.WriteLine("Type \"c\" to feed pet.");
+                            Console.WriteLine("Type \"d\" to water pet.");
+                            Console.WriteLine("Type \"e\" to play with pet.");
+                            Console.WriteLine("Type \"f\" to rest pet");
                             Console.WriteLine("Type \"z\" to stop working as a volunteer.");
                             Console.WriteLine("");
 
                             task = Console.ReadLine();
                             task = task.ToLower();
 
+
                             switch (task)
                             {
                                 case "a":
-                                    // to get volunteer name
+                                    // get volunteer name
                                     userVolunteer.EmployeeName();
                                     break;
-
+                                    
                                 case "b":
                                     // to get volunteer ID number
                                     userVolunteer.EmployeeIDNumber();
                                     break;
-
+                                    
                                 case "c":
-                                    // to Feed
-                                    userVolunteer.FeedPet();
+                                    //// status after feeding
+                                    userVolunteer.FeedingTime();
+                                    break;
+                                    
+                                case "d":
+                                    //// to water
+                                    userVolunteer.WateringTime();
                                     break;
 
-                                case "d":
-                                    // To Water
-                                    //userVolunteer.WateringTime();
+                                
+                                case "e":
+                                    //// to play
+                                    userVolunteer.PlayTime();
                                     break;
+
+
+                                case "f":
+                                    //// to rest
+                                    userVolunteer.NapTime();
+                                    break;
+
                             }
+                            
+                            Console.WriteLine("");
+                            userVolunteer.PetStatus();
+
+
                         } while (task != "z");
                         Console.WriteLine("");
-                        Console.WriteLine("Thank you for volunteering!");
-
+                        Console.WriteLine("Again thank you for volunteering!");
                         break;
 
+                    case 2:
+                        Console.WriteLine("");
+                        Console.WriteLine("Thank you for managing our shelter.");
+                        Console.WriteLine("");
+
+                        do
+                        {
+                            Console.WriteLine("What task would you like to do?");
+                            Console.WriteLine("Type \"g\" to learn your name.");
+                            Console.WriteLine("Type \"h\" to learn your employee ID number.");
+                            Console.WriteLine("Type \"i\" to play with a pet.");
+                            Console.WriteLine("Type \"j\" to adopt out a pet.");
+                            Console.WriteLine("Type \"z\" to stop working as a manager.");
+                            Console.WriteLine("");
+
+                            task = Console.ReadLine();
+                            task = task.ToLower();
+
+                            // to get manager name
+                            if (task == "g")
+                            {
+                                userManager.EmployeeName();
+                            }
+                            // to get user ID number
+                            else if (task == "h")
+                            {
+                                userManager.EmployeeIDNumber();
+                            }
+                            // to play with a pet
+                            else if (task == "i")
+                            {
+                                userManager.PlayTime();
+                            }
+                            // adopt out a pet
+                            else if (task == "j")
+                            {
+                                userManager.PetAdoption();
+                            }
+                            else
+                            {
+
+                            }
 
 
+                        } while (task != "z");
+                        Console.WriteLine("");
+                        Console.WriteLine("Again thank you for managing our shelter!");
+                        Console.WriteLine("");
+                        break;
 
-
-
-
+                      
 
                 }
 
@@ -95,6 +167,7 @@ namespace VPShelter
             Console.WriteLine("");
             Console.WriteLine("Thank you for spendig time at the Mythical Beast Pet Shelter");
             Console.WriteLine("Please visit us again soon!");
+            Console.WriteLine("");
 
 
 

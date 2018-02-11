@@ -14,8 +14,8 @@ namespace VPShelter
         //// 2 Constructors
 
         //// fields
-        private string petName;
-        private string petDescription;
+        public string petName;
+        public string petDescription;
 
 
         //// Properties
