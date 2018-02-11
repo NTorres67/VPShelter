@@ -8,14 +8,7 @@ namespace VPShelter
 {
     public class Volunteer : Employee
     {
-        // REQUJREMENTS
-        // 1 Property
-        // 1 Override Method
-        // Feed Method
-        // Water Mehtod
         
-        
-
         //// fields
 
         private string volunteerName;

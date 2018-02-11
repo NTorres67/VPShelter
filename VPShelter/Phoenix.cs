@@ -8,22 +8,16 @@ namespace VPShelter
 {
     public class Phoenix : VirtualPet
     {
-        //// REQUIREMENTS
-        //// 1 Type Property
-        //// 1 Diet Property
 
-
-
-        ////// fields
-        // invisible
+        //// fields
+        private string petType;
+        private string phoenixDiet;
 
 
         //// Properties
-        
-        public List<string> PhoenixDiet { get; set; }
+        public string PetType { get; set; }
+        public string PhoenixDiet { get; set; }
 
         
-
-
     }
 }

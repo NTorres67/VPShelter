@@ -8,10 +8,6 @@ namespace VPShelter
 {
     public abstract class Employee
     {
-        // REQUIREMENTS
-        // 1 Property
-        // 2 abstract methods
-
         // fields
         // none
      

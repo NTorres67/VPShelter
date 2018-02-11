@@ -8,11 +8,6 @@ namespace VPShelter
 {
     public class Manager : Employee
     {
-        // REQUIREMENTS
-        // 1 Property
-        // 1 Override Method
-        // Adoption Mehod
-
         //// fields
 
         private string managerName;

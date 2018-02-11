@@ -126,40 +126,36 @@ namespace VPShelter
                             task = Console.ReadLine();
                             task = task.ToLower();
 
-                            // to get manager name
-                            if (task == "g")
+                            switch (task)
                             {
-                                userManager.EmployeeName();
-                            }
-                            // to get user ID number
-                            else if (task == "h")
-                            {
-                                userManager.EmployeeIDNumber();
-                            }
-                            // to play with a pet
-                            else if (task == "i")
-                            {
-                                userManager.PlayTime();
-                            }
-                            // adopt out a pet
-                            else if (task == "j")
-                            {
-                                userManager.PetAdoption();
-                            }
-                            else
-                            {
+                                case "g":
+                                    // to get manager name
+                                    userManager.EmployeeName();
+                                    break;
 
+                                case "h":
+                                    // to get user ID number
+                                    userManager.EmployeeIDNumber();
+                                    break;
+                                    
+
+                                case "i":
+                                    // to play with a pet
+                                    userManager.PlayTime();
+                                    break;
+
+                                case "j":
+                                    // adopt out a pet
+                                    userManager.PetAdoption();
+                                    break;
                             }
-
-
+                           
                         } while (task != "z");
                         Console.WriteLine("");
                         Console.WriteLine("Again thank you for managing our shelter!");
                         Console.WriteLine("");
                         break;
-
-                      
-
+                        
                 }
 
 

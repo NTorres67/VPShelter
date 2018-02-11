@@ -12,10 +12,11 @@ namespace VPShelter
         // invisible
 
         //// Properties
+        public string PetType { get; set; }
 
-        public string FoodTypeSphinx { get; }
+        public string SphinxDiet { get; set; }
 
-        
+
 
     }
 }

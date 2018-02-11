@@ -8,17 +8,24 @@ namespace VPShelter
 {
     public class VirtualPetShelter
     {
-        //// REQUIREMENTS
-        // A data structure collecting all employees as a property
-        // A data structure collecing all pets as a property
 
         // fields
         // invisible
 
         // Properites
 
-        public List<Employee> AllEmployees { get; set; }
+        public List<Employee> AllEmployeesList { get; set; }
         public List<VirtualPet> AllPets { get; set; }
+
+
+        public void ShelterLists()
+        {
+            List<string> allEmployeesList = new List<string>();
+
+            allEmployeesList.Add("Mars");
+            allEmployeesList.Add("Athena");
+        }
+        
         
 
         

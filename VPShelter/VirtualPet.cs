@@ -15,12 +15,12 @@ namespace VPShelter
 
         //// fields
         public string petName;
-        public string petDescription;
+        public float petWeight;
 
 
         //// Properties
         public string PetName { get; set; }
-        public string PetDescription { get; set; }
+        public float PetWeight { get; set; }
 
 
         //// Constructors
@@ -29,10 +29,10 @@ namespace VPShelter
             // default Constructors
         }
 
-        public VirtualPet(string petName, string petDescription)
+        public VirtualPet(string petName, float petWeight)
         {
             this.petName = petName;
-            this.petDescription = petDescription;
+            this.petWeight = petWeight;
         }
 
 
