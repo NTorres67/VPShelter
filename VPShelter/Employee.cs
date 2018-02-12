@@ -25,9 +25,5 @@ namespace VPShelter
         public abstract void EmployeeName();
         public abstract void EmployeeIDNumber();
 
-
-
-
-
     }
 }

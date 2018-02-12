@@ -76,7 +76,7 @@ namespace VPShelter
                                     break;
                                     
                                 case "c":
-                                    //// status after feeding
+                                    //// to feeding
                                     userVolunteer.FeedingTime();
                                     break;
                                     
@@ -151,8 +151,9 @@ namespace VPShelter
                         Console.WriteLine("Again thank you for managing our shelter!");
                         Console.WriteLine("");
                         break;
-                        
                 }
+
+                userVolunteer.Tick();
 
 
             } while (userInput != 0);

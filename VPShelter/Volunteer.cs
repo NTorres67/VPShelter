@@ -436,7 +436,14 @@ namespace VPShelter
             Console.WriteLine("");
         }
 
+        public void Tick()
+        {
+            //Increase Energy Level
 
+            energyLevelEmmalani = energyLevelEmmalani + 22;
+            energyLevelMana = energyLevelMana - 11;
+
+        }
 
 
 

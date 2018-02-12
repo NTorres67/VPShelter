@@ -53,8 +53,8 @@ namespace VPShelter
         public void PlayTime()
         {
             Console.WriteLine("Which pet would you like to play with?");
-            Console.WriteLine("Type 1 to play with Emmalani.");
-            Console.WriteLine("Type 2 to play with Mana.");
+            Console.WriteLine("Type 1 to play with Emmalani");
+            Console.WriteLine("Type 2 to play with Mana");
             playWho = int.Parse(Console.ReadLine());
 
             switch (playWho)
@@ -80,7 +80,7 @@ namespace VPShelter
         }
 
 
-        //// adopt a pet
+        //// arrange a pet adoption
        
         public void PetAdoption()
         {
@@ -101,20 +101,5 @@ namespace VPShelter
             }
 
         }
-
-        //public void PetDescriptions()
-        //{
-        //    List<string> petDescriptionList = new List<string>();
-        //    petDescriptionList.Add("ID number   Name         Species    Color                 Shoulder Height(in)    Weight(lbs)");
-        //    petDescriptionList.Add("P1          Emmalani     Phoenix    purple and silver     17                     5");
-        //    petDescriptionList.Add("P2          Mana         Sphinx     tan and brown         50                     187");
-
-        //    foreach (string description in petDescriptionList)
-        //    {
-        //        Console.WriteLine(description);
-        //    }
-        //}
-
-
     }
 }
